@@ -46,7 +46,7 @@ Gem::Specification.new do |s|
       s.add_dependency(%q<httparty>, ["~> 0.13.1"])
       s.add_dependency(%q<libxml-ruby>, [">= 2.8.0"])
       s.add_dependency(%q<builder>, [">= 2.1.2"])
-      s.add_dependency(%q<oauth>, [">= 0.4.7"])
+      s.add_dependency(%q<oauth>, [">= 0.5.0"])
       s.add_dependency(%q<activemodel>, [">= 3.0.20"])
       s.add_dependency(%q<htmlentities>)
       s.add_dependency(%q<rspec>, [">= 3.2"])
