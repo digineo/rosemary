@@ -26,48 +26,18 @@ Gem::Specification.new do |s|
   s.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
   s.require_paths = ["lib"]
 
-  if s.respond_to? :specification_version then
-    s.specification_version = 3
+  raise "RubyGems 2.0 or newer is required" unless s.respond_to?(:metadata)
 
-    if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
-      s.add_runtime_dependency(%q<httparty>, ["~> 0.13.1"])
-      s.add_runtime_dependency(%q<libxml-ruby>, [">= 2.8.0"])
-      s.add_runtime_dependency(%q<builder>, [">= 2.1.2"])
-      s.add_runtime_dependency(%q<oauth>, [">= 0.5.0"])
-      s.add_runtime_dependency(%q<activemodel>, [">= 3.0.20"])
-      s.add_runtime_dependency(%q<htmlentities>)
-      s.add_development_dependency(%q<rspec>, [">= 3.2"])
-      s.add_development_dependency(%q<webmock>, [">= 1.21"])
-      s.add_development_dependency(%q<rake>, [">= 10.4.2"])
-      s.add_development_dependency(%q<yard>, [">= 0.8"])
-      s.add_development_dependency(%q<redcarpet>, [">= 3.2.3"])
-      s.add_development_dependency(%q<codeclimate-test-reporter>)
-    else
-      s.add_dependency(%q<httparty>, ["~> 0.13.1"])
-      s.add_dependency(%q<libxml-ruby>, [">= 2.8.0"])
-      s.add_dependency(%q<builder>, [">= 2.1.2"])
-      s.add_dependency(%q<oauth>, [">= 0.5.0"])
-      s.add_dependency(%q<activemodel>, [">= 3.0.20"])
-      s.add_dependency(%q<htmlentities>)
-      s.add_dependency(%q<rspec>, [">= 3.2"])
-      s.add_dependency(%q<webmock>, [">= 1.21"])
-      s.add_dependency(%q<rake>, [">= 10.4.2"])
-      s.add_dependency(%q<yard>, [">= 0.8"])
-      s.add_dependency(%q<redcarpet>, [">= 3.2.3"])
-      s.add_dependency(%q<codeclimate-test-reporter>)
-    end
-  else
-    s.add_dependency(%q<httparty>, ["~> 0.11.0"])
-    s.add_dependency(%q<libxml-ruby>, [">= 2.8.0"])
-    s.add_dependency(%q<builder>, [">= 2.1.2"])
-    s.add_dependency(%q<oauth>, [">= 0.4.7"])
-    s.add_dependency(%q<activemodel>, [">= 3.0.20"])
-    s.add_dependency(%q<htmlentities>)
-    s.add_dependency(%q<rspec>, [">= 3.2"])
-    s.add_dependency(%q<webmock>, [">= 1.21"])
-    s.add_dependency(%q<rake>, [">= 10.4.2"])
-    s.add_dependency(%q<yard>, [">= 0.8"])
-    s.add_dependency(%q<redcarpet>, [">= 3.2.3"])
-    s.add_dependency(%q<codeclimate-test-reporter>)
-  end
+  s.add_runtime_dependency(%q<httparty>, ["~> 0.13.1"])
+  s.add_runtime_dependency(%q<libxml-ruby>, [">= 2.8.0"])
+  s.add_runtime_dependency(%q<builder>, [">= 2.1.2"])
+  s.add_runtime_dependency(%q<oauth>, [">= 0.5.0"])
+  s.add_runtime_dependency(%q<activemodel>, [">= 3.0.20"])
+  s.add_runtime_dependency(%q<htmlentities>)
+  s.add_development_dependency(%q<rspec>, [">= 3.2"])
+  s.add_development_dependency(%q<webmock>, [">= 1.21"])
+  s.add_development_dependency(%q<rake>, [">= 10.4.2"])
+  s.add_development_dependency(%q<yard>, [">= 0.8"])
+  s.add_development_dependency(%q<redcarpet>, [">= 3.2.3"])
+  s.add_development_dependency(%q<codeclimate-test-reporter>)
 end
