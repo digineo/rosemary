@@ -28,7 +28,7 @@ Gem::Specification.new do |s|
 
   raise "RubyGems 2.0 or newer is required" unless s.respond_to?(:metadata)
 
-  s.add_runtime_dependency(%q<httparty>, ["~> 0.13.1"])
+  s.add_runtime_dependency(%q<httparty>, [">= 0.14"])
   s.add_runtime_dependency(%q<libxml-ruby>, [">= 2.8.0"])
   s.add_runtime_dependency(%q<builder>, [">= 2.1.2"])
   s.add_runtime_dependency(%q<oauth>, [">= 0.5.0"])
